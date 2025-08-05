@@ -2,3 +2,9 @@ baseURL = 'https://zhangrayhung.github.io/'
 languageCode = 'en-us'
 title = 'YEKAIHONGXUE'
 theme = "paper"
+
+[params]
+  # home page profile
+  avatar = 'zhangrayhung@gmail.com'
+  name = 'YEKAIHONGXUE'
+  bio = 'Yekai is on left and Hongxue is on right'
