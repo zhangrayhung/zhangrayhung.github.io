@@ -8,3 +8,9 @@ theme = "paper"
   avatar = 'zhangrayhung@gmail.com'
   name = 'YEKAIHONGXUE'
   bio = 'Yekai is on the left and Hongxue is on the right'
+
+[menu]
+  [[menu.main]]
+    name = 'Blog'
+    url = '/posts/'
+    weight = 1
