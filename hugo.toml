@@ -11,6 +11,6 @@ theme = "paper"
 
 [menu]
   [[menu.main]]
-    name = 'Blog'
+    name = 'Posts'
     url = '/posts/'
     weight = 1
