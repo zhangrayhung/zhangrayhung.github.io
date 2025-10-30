@@ -9,6 +9,16 @@ theme = "paper"
   name = 'YEKAIHONGXUE'
   bio = 'Yekai is on the left and Hongxue is on the right'
 
+  # enable Giscus(Github discussion), https://github.com/apps/giscus, https://giscus.app/
+  [params.giscus]
+    enable = true
+    repo = "zhangrayhung/hugo-comments"
+    repoId = "R_kgDOQMBS-g"
+    category = "Announcements"
+    categoryId = "DIC_kwDOQMBS-s4CxQEL"
+    mapping = "pathname"
+    theme = "preferred_color_scheme"
+
 [menu]
   [[menu.main]]
     name = 'Posts'
