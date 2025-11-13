@@ -9,6 +9,8 @@ theme = "paper"
   name = 'YEKAIHONGXUE'
   bio = 'Yekai is on the left and Hongxue is on the right'
 
+  fancybox = true
+
   # enable Giscus(Github discussion), https://github.com/apps/giscus, https://giscus.app/
   [params.giscus]
     enable = true
