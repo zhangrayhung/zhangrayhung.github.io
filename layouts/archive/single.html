@@ -1,21 +1,46 @@
 {{ define "main" }}
 <article class="post">
-  <header class="post-header">
-    <h1 class="post-title">{{ .Title }}</h1>
-  </header>
+  <header class="post-header"><h1 class="post-title">{{ .Title }}</h1></header>
 
   <div class="post-content">
-    {{ range (.Site.RegularPages.GroupByDate "2006") }}
-      <h2 id="{{ .Key }}">{{ .Key }}</h2>
-      <ul class="post-list">
-        {{ range .Pages }}
-          <li class="post-item">
-            <time class="post-date">{{ .Date.Format "Jan 2, 2006" }}</time>
-            <a class="post-title" href="{{ .RelPermalink }}">{{ .Title }}</a>
-          </li>
-        {{ end }}
-      </ul>
+    {{ range (.Site.RegularPages.ByDate.Reverse.GroupByDate "2006") }}
+      {{ if eq .Key "0001" }}{{ continue }}{{ end }}
+      <section class="archive-year">
+        <h2 class="year-title" style="cursor:pointer;">
+          {{ .Key }} <span class="toggle">▶</span>
+        </h2>
+        <div class="year-body" style="display:none;">
+          {{ range (.Pages.GroupByDate "January") }}
+            <h3 class="month-title">{{ .Key }}</h3>
+            <ul class="post-list">
+              {{ range .Pages }}
+                <li class="post-item">
+                  <time class="post-date">{{ .Date.Format "Jan 2" }}</time>
+                  <a class="post-title" href="{{ .RelPermalink }}">{{ .Title }}</a>
+                </li>
+              {{ end }}
+            </ul>
+          {{ end }}
+        </div>
+      </section>
     {{ end }}
   </div>
 </article>
+
+<script>
+/* fold/unfold */
+document.querySelectorAll('.year-title').forEach(head => {
+  head.addEventListener('click', () => {
+    const body  = head.nextElementSibling;
+    const arrow = head.querySelector('.toggle');
+    if (body.style.display === 'none') {
+      body.style.display = 'block';
+      arrow.textContent  = '▼';
+    } else {
+      body.style.display = 'none';
+      arrow.textContent  = '▶';
+    }
+  });
+});
+</script>
 {{ end }}
