@@ -1,0 +1,34 @@
+.tags-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+  margin: 20px 0 0 0;
+}
+
+.tag-item a {
+  display: inline-block;
+  background-color: #f0f0f0;
+  color: #333;
+  padding: 8px 15px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 14px;
+  transition: all 0.2s ease-in-out;
+}
+
+.tag-item a:hover {
+  background-color: #ddd;
+  transform: scale(1.05);
+}
+
+/* Dark mode styles */
+body.dark .tag-item a {
+  background-color: #333;
+  color: #f0f0f0;
+}
+
+body.dark .tag-item a:hover {
+  background-color: #555;
+}
