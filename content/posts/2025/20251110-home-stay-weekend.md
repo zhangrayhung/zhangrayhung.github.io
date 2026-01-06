@@ -3,7 +3,7 @@ date = '2025-11-10T15:18:10+08:00'
 lastmod = '2025-11-11T15:18:14+08:00'
 draft = false
 title = 'Home stay weekend'
-tags = ['confide']
+tags = ['weekend']
 address = 'Shenzhen city, Guangdong Province'
 +++
 

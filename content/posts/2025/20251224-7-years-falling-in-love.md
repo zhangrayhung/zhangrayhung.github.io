@@ -3,7 +3,7 @@ date = '2025-12-24T11:17:11+08:00'
 lastmod = '2025-12-31T16:20:11+08:00'
 draft = false
 title = '7 years falling in love'
-tags = ['confide']
+tags = ['lover']
 address = 'Shenzhen city, Guangdong Province'
 +++
 
