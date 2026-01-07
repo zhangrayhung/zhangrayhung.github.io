@@ -3,13 +3,15 @@
   <header class="post-header"><h1 class="post-title">{{ .Title }}</h1></header>
 
   <div class="post-content">
+    {{ $currentYear := now.Format "2006" }}
     {{ range (.Site.RegularPages.ByDate.Reverse.GroupByDate "2006") }}
       {{ if eq .Key "0001" }}{{ continue }}{{ end }}
+      {{ $isCurrentYear := eq .Key $currentYear }}
       <section class="archive-year">
-        <h2 class="year-title" style="cursor:pointer;">
+        <h2 class="year-title {{ if $isCurrentYear }}open{{ end }}">
           {{ .Key }} <span class="toggle">▶</span>
         </h2>
-        <div class="year-body" style="display:none;">
+        <div class="year-body">
           {{ range (.Pages.GroupByDate "January") }}
             <h3 class="month-title">{{ .Key }}</h3>
             <ul class="post-list">
@@ -30,16 +32,25 @@
 <script>
 /* fold/unfold */
 document.querySelectorAll('.year-title').forEach(head => {
-  head.addEventListener('click', () => {
-    const body  = head.nextElementSibling;
-    const arrow = head.querySelector('.toggle');
-    if (body.style.display === 'none') {
+  const arrow = head.querySelector('.toggle');
+  const body  = head.nextElementSibling;
+
+  function updateViewState() {
+    if (head.classList.contains('open')) {
       body.style.display = 'block';
-      arrow.textContent  = '▼';
+      arrow.style.transform = 'rotate(90deg)';
     } else {
       body.style.display = 'none';
-      arrow.textContent  = '▶';
+      arrow.style.transform = 'rotate(0deg)';
     }
+  }
+
+  // Set initial state
+  updateViewState();
+
+  head.addEventListener('click', () => {
+    head.classList.toggle('open');
+    updateViewState();
   });
 });
 </script>

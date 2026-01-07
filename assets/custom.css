@@ -32,3 +32,60 @@ body.dark .tag-item a {
 body.dark .tag-item a:hover {
   background-color: #555;
 }
+
+/* Archive page styles */
+.archive-year {
+  margin-bottom: 2rem;
+  border-left: 2px solid var(--color-border);
+  padding-left: 1.5rem;
+  transition: border-color 0.3s;
+}
+
+.archive-year:hover {
+  border-left-color: var(--color-text);
+}
+
+.year-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+}
+
+.year-title .toggle {
+  display: inline-block;
+  transition: transform 0.3s;
+  font-size: 1rem;
+  vertical-align: middle;
+}
+
+.month-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--color-text-light);
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.post-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.post-item {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 0.5rem;
+}
+
+.post-date {
+  color: var(--color-text-light);
+  width: 4rem;
+  flex-shrink: 0;
+  font-size: 0.9em;
+}
+
+/* Dark mode adjustments */
+body.dark .archive-year:hover {
+  border-left-color: var(--color-text);
+}
