@@ -89,3 +89,22 @@ body.dark .tag-item a:hover {
 body.dark .archive-year:hover {
   border-left-color: var(--color-text);
 }
+
+article section {
+  background-color: #fff9e9;
+  background-image: linear-gradient(to bottom, transparent 1.45rem, #E8E8E8 1.45rem);
+  background-size: 1.5rem 1.5rem;
+  line-height: 1.5rem;
+  padding: 1.5rem;
+  border: 1px solid #ddd;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+  font-family: 'Courier New', Courier, monospace; /* A typewriter-like font */
+  background-attachment: local;
+}
+
+body.dark article section {
+    background-color: #282828;
+    background-image: linear-gradient(to bottom, transparent 1.45rem, #404040 1.45rem);
+    border-color: #505050;
+    color: #f0f0f0;
+}
