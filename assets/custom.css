@@ -110,6 +110,10 @@ body.dark article section {
     color: #f0f0f0;
 }
 
-article section p {
-  margin: 0;
+/* Ensure block elements align with the line-height grid */
+article section p,
+article section ul,
+article section ol,
+article section blockquote {
+  margin: 0 0 2.2rem 0;
 }
