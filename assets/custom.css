@@ -92,9 +92,9 @@ body.dark .archive-year:hover {
 
 article section {
   background-color: #fff9e9;
-  background-image: linear-gradient(to bottom, transparent 1.9rem, #E8E8E8 1.9rem);
-  background-size: 2rem 2rem;
-  line-height: 2rem;
+  background-image: linear-gradient(to bottom, transparent 2.15rem, #ccc 2.15rem);
+  background-size: 2.2rem 2.2rem;
+  line-height: 2.2rem;
   padding: 1.5rem;
   border: 1px solid #ddd;
   box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
@@ -104,7 +104,7 @@ article section {
 
 body.dark article section {
     background-color: #282828;
-    background-image: linear-gradient(to bottom, transparent 1.9rem, #404040 1.9rem);
+    background-image: linear-gradient(to bottom, transparent 2.15rem, #555 2.15rem);
     border-color: #505050;
     color: #f0f0f0;
 }
