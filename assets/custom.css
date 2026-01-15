@@ -91,29 +91,26 @@ body.dark .archive-year:hover {
 }
 
 article section {
-  background-color: #fff9e9;
-  background-image: linear-gradient(to bottom, #ccc 1px, transparent 1px);
-  background-size: 100% 2.2rem;
+  font-family: 'Courier New', Courier, monospace;
   line-height: 2.2rem;
-  background-position: 0 0.4rem; /* Adjust this to position the line above the text */
   padding: 1.5rem;
   border: 1px solid #ddd;
   box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
-  font-family: 'Courier New', Courier, monospace; /* A typewriter-like font */
-  background-attachment: local;
+  background-color: #fff9e9;
+  background-image: linear-gradient(to bottom, transparent calc(2.2rem - 1px), #ccc calc(2.2rem - 1px));
+  background-size: 100% 2.2rem;
 }
 
-body.dark article section {
-    background-color: #282828;
-    background-image: linear-gradient(to bottom, #555 1px, transparent 1px);
-    border-color: #505050;
-    color: #f0f0f0;
-}
-
-/* Ensure block elements align with the line-height grid */
 article section p,
 article section ul,
 article section ol,
 article section blockquote {
-  margin: 0 0 2.2rem 0;
+  margin: 0;
+}
+
+body.dark article section {
+  background-color: #282828;
+  border-color: #505050;
+  color: #f0f0f0;
+  background-image: linear-gradient(to bottom, transparent calc(2.2rem - 1px), #555 calc(2.2rem - 1px));
 }
