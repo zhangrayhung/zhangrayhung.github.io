@@ -109,3 +109,7 @@ body.dark article section {
     border-color: #505050;
     color: #f0f0f0;
 }
+
+article section p {
+  margin: 0;
+}
