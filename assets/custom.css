@@ -84,28 +84,3 @@ body.dark .tag-item a:hover {
   flex-shrink: 0;
   font-size: 0.9em;
 }
-
-/* Dark mode adjustments */
-body.dark .archive-year:hover {
-  border-left-color: var(--color-text);
-}
-
-article section {
-  background-color: #fff9e9;
-  background-image: linear-gradient(to bottom, #ccc 1px, transparent 1px);
-  background-size: 100% 2.2rem;
-  line-height: 2.2rem;
-  background-position: 0 0.4rem; /* Adjust this to position the line above the text */
-  padding: 1.5rem;
-  border: 1px solid #ddd;
-  box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
-  font-family: 'Courier New', Courier, monospace; /* A typewriter-like font */
-  background-attachment: local;
-}
-
-body.dark article section {
-    background-color: #f0f0f0;
-    background-image: linear-gradient(to bottom, #555 1px, transparent 1px);
-    border-color: #505050;
-    color: #282828;
-}
